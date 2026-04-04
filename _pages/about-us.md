@@ -83,7 +83,7 @@ permalink: /about-us
 
   <section>
     <h2>Get in Touch</h2>
-    <p>If you have a question, a correction, or a topic you want us to cover, you can reach us through our <a href="/contact-us/">Contact page</a>. We read everything. We may not get back to every message right away, but we do read every one.</p>
+    <p>If you have a question, a correction, or a topic you want us to cover, you can reach us through our <a href="/contact-us">Contact page</a>. We read everything. We may not get back to every message right away, but we do read every one.</p>
   </section>
 
 </div>
