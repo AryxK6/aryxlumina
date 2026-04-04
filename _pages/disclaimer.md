@@ -2,7 +2,7 @@
 layout: default
 title: "Disclaimer"
 description: "ARYX Lumina disclaimer. Our content is for informational purposes only and is not a substitute for professional medical advice."
-permalink: /disclaimer/
+permalink: /disclaimer
 ---
 
 <style>
