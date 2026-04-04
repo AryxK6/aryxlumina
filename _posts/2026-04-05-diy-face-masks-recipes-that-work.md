@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "DIY Face Masks: Recipes That Actually Work"
-date: 2026-04-05
+date: 2026-04-04
 permalink: /diy-face-masks-recipes-that-work
 description: "DIY face mask recipes using honey, clay, oatmeal, and turmeric. Learn which ingredients suit your skin type and how to use them safely."
 categories: [Natural & DIY, DIY Face Masks]
