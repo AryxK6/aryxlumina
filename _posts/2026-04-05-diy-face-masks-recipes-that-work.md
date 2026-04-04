@@ -121,3 +121,4 @@ Raw honey applied directly is the most evidence-backed single ingredient for acn
 
 **Can I leave a DIY face mask on overnight?**
 Honey can safely be left on overnight. Most other DIY masks should not be. Clay masks left overnight over-dry the skin. Turmeric masks left overnight significantly increase staining. Oatmeal masks dry and become difficult to remove. For overnight treatment, a thin layer of plain honey is the practical option.
+{% endif %}
