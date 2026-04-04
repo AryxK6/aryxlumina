@@ -8,7 +8,6 @@ categories: [Natural & DIY, DIY Face Masks]
 tags: [DIY Face Masks, Natural Skincare, Honey Mask, Clay Mask, Turmeric Mask, Oatmeal Mask, Homemade Face Mask, Skin Care]
 image: https://i.ibb.co/xtzPjGyL/Woman-applying-face-202604050313.jpg
 ---
-
 Most DIY face mask content online is either copied from other websites or written by people who have not thought carefully about what these ingredients actually do. Honey and turmeric end up in the same recipe as lemon juice and yogurt, with no real consideration for whether that combination makes sense for a given skin type or concern. Some of those combinations are fine. Some actively work against each other.
 
 This covers what the main ingredients in DIY masks actually do, which ones have research behind them, and how to put together something that is genuinely useful rather than just aesthetically satisfying to mix in a bowl.
