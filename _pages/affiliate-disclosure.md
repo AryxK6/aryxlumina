@@ -92,7 +92,7 @@ permalink: /affiliate-disclosure
   <section>
     <h2>Identifying Affiliate Links</h2>
     <p>We try to make it easy to know when a link might be an affiliate link. You may see phrases like "this is an affiliate link" or "we may earn a commission" near product links. In some cases the disclosure is at the top of the article rather than next to every individual link.</p>
-    <p>If you are ever unsure whether a link is an affiliate link, feel free to <a href="/contact-us/">contact us</a> and ask.</p>
+    <p>If you are ever unsure whether a link is an affiliate link, feel free to <a href="/contact-us">contact us</a> and ask.</p>
   </section>
 
   <section>
@@ -103,7 +103,7 @@ permalink: /affiliate-disclosure
 
   <section>
     <h2>Questions</h2>
-    <p>If you have questions about our affiliate relationships or want to know whether a specific link or article involves affiliate compensation, contact us through our <a href="/contact-us/">Contact Us</a> page.</p>
+    <p>If you have questions about our affiliate relationships or want to know whether a specific link or article involves affiliate compensation, contact us through our <a href="/contact-us">Contact Us</a> page.</p>
   </section>
 
 </div>
