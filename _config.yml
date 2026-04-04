@@ -6,3 +6,5 @@ permalink: /:title/
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+include:
+  - _pages
