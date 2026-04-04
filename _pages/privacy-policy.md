@@ -89,7 +89,7 @@ permalink: /privacy-policy
     <p>ARYX Lumina uses several third-party services to operate. These services have their own privacy policies and handle data according to their own terms:</p>
     <ul>
       <li><strong>Google Analytics/AdSense:</strong> Google Analytics tracks site usage. Google AdSense may serve ads. Google's privacy policy is available at <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
-      <li><strong>Affiliate partners:</strong> When we link to products with affiliate links, those sites have their own tracking and privacy practices. See our <a href="/affiliate-disclosure/">Affiliate Disclosure</a> for details.</li>
+      <li><strong>Affiliate partners:</strong> When we link to products with affiliate links, those sites have their own tracking and privacy practices. See our <a href="/affiliate-disclosure">Affiliate Disclosure</a> for details.</li>
     </ul>
     <p>We do not share your personal information with third parties for their own marketing purposes.</p>
   </section>
@@ -116,7 +116,7 @@ permalink: /privacy-policy
       <li>The right to correct inaccurate information</li>
       <li>The right to object to certain types of processing</li>
     </ul>
-    <p>To make any of these requests, use the contact form on our <a href="/contact-us/">Contact Us</a> page.</p>
+    <p>To make any of these requests, use the contact form on our <a href="/contact-us">Contact Us</a> page.</p>
   </section>
 
   <section>
@@ -131,7 +131,7 @@ permalink: /privacy-policy
 
   <section>
     <h2>Contact</h2>
-    <p>If you have questions about this policy or how your data is handled, reach out through our <a href="/contact-us/">Contact Us</a> page.</p>
+    <p>If you have questions about this policy or how your data is handled, reach out through our <a href="/contact-us">Contact Us</a> page.</p>
   </section>
 
 </div>
