@@ -2,7 +2,7 @@
 layout: default
 title: "Terms & Conditions"
 description: "ARYX Lumina terms and conditions. Rules for using our site, content use policy, and liability limitations."
-permalink: /terms-and-conditions/
+permalink: /terms-and-conditions
 ---
 
 <style>
