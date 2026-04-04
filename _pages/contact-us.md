@@ -2,7 +2,7 @@
 layout: default
 title: "Contact Us"
 description: "Get in touch with the ARYX Lumina team. Questions, corrections, topic suggestions, or brand collaborations."
-permalink: /contact-us/
+permalink: /contact-us
 ---
 
 <style>
