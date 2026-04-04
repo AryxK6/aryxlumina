@@ -2,7 +2,7 @@
 layout: default
 title: "Affiliate Disclosure"
 description: "ARYX Lumina affiliate disclosure. Learn how we use affiliate links and how it affects our editorial standards."
-permalink: /affiliate-disclosure/
+permalink: /affiliate-disclosure
 ---
 
 <style>
