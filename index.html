@@ -3,35 +3,28 @@ layout: default
 title: ARYX Lumina · Health & Beauty
 description: Your trusted guide to evidence-based beauty, natural wellness, and honest product reviews. Glow from the inside out.
 ---
-
 <style>
 /* Homepage specific */
 .home-wrap { display:grid; grid-template-columns:1fr 280px; gap:24px; align-items:start; }
 @media(max-width:960px){ .home-wrap { grid-template-columns:1fr; } }
 </style>
-
 <div class="home-wrap">
   <div>
-
     <!-- HERO: Latest Post -->
     <div class="hero-post" id="hero-post">
       <div style="padding:40px;text-align:center;color:var(--muted);font-size:12px;">Loading...</div>
     </div>
-
     <!-- LATEST ARTICLES -->
     <div class="sec-hdr">
       <h2 class="sec-title">Latest Articles</h2>
       <div class="sec-line"></div>
       <span class="sec-tag">FRESH</span>
     </div>
-
     <div class="grid2" id="posts-grid">
       <div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--muted);font-size:12px;">Loading articles...</div>
     </div>
     <div id="pagination-wrap"></div>
-
   </div>
-
   <!-- RIGHT COLUMN -->
   <div class="rcol">
     <div class="rcol-inner">
@@ -56,7 +49,6 @@ description: Your trusted guide to evidence-based beauty, natural wellness, and 
     </div>
   </div>
 </div>
-
 <script>
 // ---- POSTS DATA FROM JEKYLL ----
 var ALL_POSTS = [
@@ -71,7 +63,6 @@ var ALL_POSTS = [
   }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ];
-
 // ---- HERO ----
 function loadHeroPost(){
   var hero = document.getElementById('hero-post');
@@ -93,7 +84,6 @@ function loadHeroPost(){
   html += '</div></a>';
   hero.innerHTML = html;
 }
-
 // ---- POSTS GRID ----
 var POSTS_PER_PAGE = 8;
 var _currentPage = 0;
@@ -104,7 +94,6 @@ function loadHomePosts(){
   grid.innerHTML = '';
   showMorePosts();
 }
-
 function buildPostCard(p){
   var html = '<a class="gcard" href="'+p.url+'">';
   html += '<div class="gc-img">'+(p.image?'<img src="'+p.image+'" alt="'+p.title+'" loading="lazy"/>':'<span style="font-size:32px;opacity:0.3;">⚡</span>')+'</div>';
@@ -115,7 +104,6 @@ function buildPostCard(p){
   html += '</div></a>';
   return html;
 }
-
 function showMorePosts(){
   var grid = document.getElementById('posts-grid');
   if(!grid) return;
@@ -135,13 +123,11 @@ function showMorePosts(){
     wrap.innerHTML = '';
   }
 }
-
 function loadMorePosts(){
   var btn = document.getElementById('load-more-btn');
   if(btn) btn.classList.add('loading');
   setTimeout(showMorePosts, 300);
 }
-
 // ---- SIDEBAR WIDGETS ----
 function loadSidebarWidgets(){
   // Popular posts (latest 5)
@@ -150,7 +136,6 @@ function loadSidebarWidgets(){
     popHtml += '<a class="pop-item" href="'+p.url+'"><div class="pop-num">0'+(i+1)+'</div><div class="pop-text">'+p.title+'</div></a>';
   });
   document.getElementById('pop-list-home').innerHTML = popHtml;
-
   // Categories
   var cats = {};
   ALL_POSTS.forEach(function(p){ if(p.category){ cats[p.category]=(cats[p.category]||0)+1; } });
@@ -162,7 +147,6 @@ function loadSidebarWidgets(){
     }
   });
   if(catHtml) document.getElementById('cat-list-home').innerHTML = catHtml;
-
   // Archive
   var months = {};
   var monthNames = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -176,7 +160,6 @@ function loadSidebarWidgets(){
   });
   if(arcHtml) document.getElementById('arc-list-home').innerHTML = arcHtml;
 }
-
 document.addEventListener('DOMContentLoaded', function(){
   loadHeroPost();
   loadHomePosts();
