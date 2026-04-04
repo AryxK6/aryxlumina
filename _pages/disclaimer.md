@@ -68,7 +68,7 @@ permalink: /disclaimer
   <section>
     <h2>Product Reviews and Recommendations</h2>
     <p>Product reviews on this site are based on our own research, testing, and assessment. We aim to be honest about both what we liked and what we did not. A positive review is not a guarantee that the product will work for you, and we do not accept payment to write favorable reviews.</p>
-    <p>Some product links may be affiliate links, which means we earn a small commission if you make a purchase through them at no extra cost to you. This does not affect which products we choose to cover or how we review them. For full details, see our <a href="/affiliate-disclosure/">Affiliate Disclosure</a>.</p>
+    <p>Some product links may be affiliate links, which means we earn a small commission if you make a purchase through them at no extra cost to you. This does not affect which products we choose to cover or how we review them. For full details, see our <a href="/affiliate-disclosure">Affiliate Disclosure</a>.</p>
   </section>
 
   <section>
@@ -79,7 +79,7 @@ permalink: /disclaimer
   <section>
     <h2>Accuracy and Updates</h2>
     <p>We try to keep content accurate and up to date, but research in health and beauty evolves. Information that was correct when we published an article may change over time as new studies come out or guidance updates. Always check for the most current recommendations, especially for medical topics.</p>
-    <p>If you notice an error in something we have published, we would genuinely appreciate a heads up through our <a href="/contact-us/">Contact page</a>.</p>
+    <p>If you notice an error in something we have published, we would genuinely appreciate a heads up through our <a href="/contact-us">Contact page</a>.</p>
   </section>
 
   <section>
@@ -89,7 +89,7 @@ permalink: /disclaimer
 
   <section>
     <h2>Questions</h2>
-    <p>If anything in this disclaimer is unclear or you have questions about how we approach content on this site, reach out through our <a href="/contact-us/">Contact Us</a> page.</p>
+    <p>If anything in this disclaimer is unclear or you have questions about how we approach content on this site, reach out through our <a href="/contact-us">Contact Us</a> page.</p>
   </section>
 
 </div>
