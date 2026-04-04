@@ -55,7 +55,7 @@ permalink: /terms-and-conditions
       <li>Scrape or automatically extract content from this site</li>
       <li>Represent our content as your own original work</li>
     </ul>
-    <p>Brief quotes with clear attribution and a source link are generally fine. If you are unsure whether a specific use is acceptable, <a href="/contact-us/">contact us</a> first.</p>
+    <p>Brief quotes with clear attribution and a source link are generally fine. If you are unsure whether a specific use is acceptable, <a href="/contact-us">contact us</a> first.</p>
   </section>
 
   <section>
@@ -67,13 +67,13 @@ permalink: /terms-and-conditions
   <section>
     <h2>Accuracy of Information</h2>
     <p>We make a genuine effort to publish accurate, well-researched content. However, we cannot guarantee that everything on the site is always current, complete, or error-free. Health and beauty research changes, and what was accurate at the time of publication may have been updated since.</p>
-    <p>Nothing on this site should be taken as medical, professional, or expert advice. For full details on this, see our <a href="/disclaimer/">Disclaimer</a>.</p>
+    <p>Nothing on this site should be taken as medical, professional, or expert advice. For full details on this, see our <a href="/disclaimer">Disclaimer</a>.</p>
   </section>
 
   <section>
     <h2>External Links</h2>
     <p>ARYX Lumina links to external websites for reference and reader convenience. We do not control these websites and are not responsible for their content, availability, accuracy, or privacy practices.</p>
-    <p>Some external links may be affiliate links. When you click an affiliate link and make a purchase, we may earn a commission at no cost to you. See our <a href="/affiliate-disclosure/">Affiliate Disclosure</a> for more details.</p>
+    <p>Some external links may be affiliate links. When you click an affiliate link and make a purchase, we may earn a commission at no cost to you. See our <a href="/affiliate-disclosure">Affiliate Disclosure</a> for more details.</p>
   </section>
 
   <section>
@@ -97,7 +97,7 @@ permalink: /terms-and-conditions
 
   <section>
     <h2>Privacy</h2>
-    <p>Your use of this site is also governed by our <a href="/privacy-policy/">Privacy Policy</a>, which is incorporated into these Terms by reference. Please read it to understand how we handle your data.</p>
+    <p>Your use of this site is also governed by our <a href="/privacy-policy">Privacy Policy</a>, which is incorporated into these Terms by reference. Please read it to understand how we handle your data.</p>
   </section>
 
   <section>
@@ -112,7 +112,7 @@ permalink: /terms-and-conditions
 
   <section>
     <h2>Contact</h2>
-    <p>If you have questions about these Terms and Conditions or want to report a potential violation, reach out through our <a href="/contact-us/">Contact Us</a> page.</p>
+    <p>If you have questions about these Terms and Conditions or want to report a potential violation, reach out through our <a href="/contact-us">Contact Us</a> page.</p>
   </section>
 
 </div>
