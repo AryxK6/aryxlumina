@@ -102,22 +102,3 @@ This is where most DIY mask content falls short. A honey mask is not universally
 ## How Often to Use a Face Mask
 
 Once or twice a week is the standard recommendation for most masks. More frequent use does not produce proportionally better results and can actually over-strip or over-sensitize the skin depending on the mask type. Clay masks specifically should not be used daily on any skin type.
-
-{% if page.faq %}
-## Frequently Asked Questions
-
-**Can I use a DIY face mask every day?**
-No. Once or twice a week is appropriate for most mask types. Daily masking, particularly with clay, disrupts the skin barrier and causes more irritation than benefit. Honey can be used more frequently as it is gentle, but daily masking of any kind is generally unnecessary.
-
-**Does turmeric actually brighten skin?**
-Yes, but modestly and with consistent use. Curcumin inhibits melanin production, which over several weeks can reduce the appearance of hyperpigmentation and give the skin a slightly more even tone. The effects are surface-level and more gradual than dedicated brightening actives like vitamin C serum or niacinamide used consistently.
-
-**Is a DIY face mask as effective as a store-bought one?**
-For some concerns, yes. A raw honey mask provides genuine hydration and antimicrobial effects comparable to many commercial honey masks. For more complex skin concerns like significant acne, active hyperpigmentation, or anti-aging, formulated products with stabilized actives at clinically tested concentrations will outperform DIY alternatives.
-
-**What is the best DIY face mask for acne?**
-Raw honey applied directly is the most evidence-backed single ingredient for acne-prone skin. Adding a small amount of turmeric increases anti-inflammatory and antibacterial effects. Kaolin or bentonite clay masks draw out excess sebum from congested pores. Which one to choose depends on whether the primary concern is inflammation, bacteria, or congestion.
-
-**Can I leave a DIY face mask on overnight?**
-Honey can safely be left on overnight. Most other DIY masks should not be. Clay masks left overnight over-dry the skin. Turmeric masks left overnight significantly increase staining. Oatmeal masks dry and become difficult to remove. For overnight treatment, a thin layer of plain honey is the practical option.
-{% endif %}
