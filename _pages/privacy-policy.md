@@ -2,7 +2,7 @@
 layout: default
 title: "Privacy Policy"
 description: "ARYX Lumina privacy policy. Learn what data we collect, how we use it, and your rights as a visitor."
-permalink: /privacy-policy/
+permalink: /privacy-policy
 ---
 
 <style>
