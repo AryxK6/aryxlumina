@@ -45,19 +45,16 @@ layout: default
       {{ content }}
       <hr>
 
-<!-- 🔥 Engagement CTA -->
 <div id="engagementBox">
   <p><strong>What do you think?</strong> Have you tried this or have a better idea?</p>
   <p>👇 Share your thoughts below and join the discussion.</p>
 </div>
 
-<!-- 💬 First Comment CTA -->
 <div id="firstCommentCTA">
   Be the first to comment and start the conversation 🚀
 </div>
 
 <style>
-/* CTA Styling */
 #engagementBox {
   margin-top: 20px;
   padding: 16px;
@@ -73,7 +70,6 @@ layout: default
   color: var(--muted);
 }
 
-/* Button */
 #commentBtn {
   margin-top: 15px;
   background: var(--bg-card);
@@ -89,7 +85,6 @@ layout: default
   box-shadow: var(--neon-glow);
 }
 
-/* FIXED Wrapper (NO SCROLL ISSUE) */
 #commentWrapper {
   display: none;
   width: 100%;
@@ -100,7 +95,6 @@ layout: default
   margin-top: 20px;
 }
 
-/* Comment Box Styling */
 #cusdis_thread {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -119,7 +113,8 @@ layout: default
     data-app-id="f919e8d2-dfdb-47b8-a2c8-dcef44c952cf"
     data-page-id="{{ page.url }}"
     data-page-url="{{ site.url }}{{ page.url }}"
-    data-page-title="{{ page.title }}">
+    data-page-title="{{ page.title }}"
+    data-theme="dark">
   </div>
 </div>
 
@@ -134,7 +129,13 @@ function loadComments() {
     document.body.appendChild(script);
     commentsLoaded = true;
 
-    setTimeout(setCusdisTheme, 1000);
+    // Force resize fix
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 1500);
+
+    // Force theme sync
+    setTimeout(setCusdisTheme, 1500);
   }
 }
 
@@ -164,7 +165,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-/* 🔥 DARK/LIGHT THEME FIX */
+/* 🔥 STRONG THEME SYNC */
 function setCusdisTheme() {
   const theme = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
 
@@ -177,9 +178,14 @@ function setCusdisTheme() {
   }
 }
 
-/* Theme change detect */
-document.addEventListener("click", function () {
+/* Detect theme change */
+const observer = new MutationObserver(() => {
   setTimeout(setCusdisTheme, 500);
+});
+
+observer.observe(document.documentElement, {
+  attributes: true,
+  attributeFilter: ['data-theme']
 });
 </script>
     </div>
