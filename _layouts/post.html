@@ -45,7 +45,7 @@ layout: default
       {{ content }}
       <hr>
 
-<!-- 🔥 Engagement CTA (theme matched) -->
+<!-- 🔥 Engagement CTA -->
 <div id="engagementBox">
   <p><strong>What do you think?</strong> Have you tried this or have a better idea?</p>
   <p>👇 Share your thoughts below and join the discussion.</p>
@@ -89,21 +89,18 @@ layout: default
   box-shadow: var(--neon-glow);
 }
 
-/* Wrapper FIXED (no inner scroll) */
+/* FIXED Wrapper (NO SCROLL ISSUE) */
 #commentWrapper {
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  display: none;
+  width: 100%;
 }
 
 #commentWrapper.active {
-  height: auto;
-  opacity: 1;
+  display: block;
   margin-top: 20px;
 }
 
-/* Comment Box Styling (THEME MATCH 🔥) */
+/* Comment Box Styling */
 #cusdis_thread {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -117,7 +114,6 @@ layout: default
 </button>
 
 <div id="commentWrapper">
-
   <div id="cusdis_thread"
     data-host="https://cusdis.com"
     data-app-id="f919e8d2-dfdb-47b8-a2c8-dcef44c952cf"
@@ -125,7 +121,6 @@ layout: default
     data-page-url="{{ site.url }}{{ page.url }}"
     data-page-title="{{ page.title }}">
   </div>
-
 </div>
 
 <script>
@@ -139,7 +134,7 @@ function loadComments() {
     document.body.appendChild(script);
     commentsLoaded = true;
 
-    setTimeout(setCusdisTheme, 500);
+    setTimeout(setCusdisTheme, 1000);
   }
 }
 
@@ -169,14 +164,23 @@ window.addEventListener("scroll", function () {
   }
 });
 
-/* 🔥 Theme Sync (IMPORTANT) */
+/* 🔥 DARK/LIGHT THEME FIX */
 function setCusdisTheme() {
-  const theme = document.documentElement.getAttribute("data-theme");
-  const el = document.getElementById("cusdis_thread");
-  if (el) {
-    el.setAttribute("data-theme", theme === "dark" ? "dark" : "light");
+  const theme = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+
+  const iframe = document.querySelector("#cusdis_thread iframe");
+  if (iframe) {
+    iframe.contentWindow.postMessage({
+      type: "set-theme",
+      data: theme
+    }, "*");
   }
 }
+
+/* Theme change detect */
+document.addEventListener("click", function () {
+  setTimeout(setCusdisTheme, 500);
+});
 </script>
     </div>
 
