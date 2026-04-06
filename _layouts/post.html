@@ -45,45 +45,70 @@ layout: default
       {{ content }}
       <hr>
 
-<!-- 🔥 Engagement CTA -->
-<div id="engagementBox" style="margin-top:20px; font-size:16px;">
+<!-- 🔥 Engagement CTA (theme matched) -->
+<div id="engagementBox">
   <p><strong>What do you think?</strong> Have you tried this or have a better idea?</p>
-  <p>👇 Share your thoughts in the comments below and join the discussion.</p>
+  <p>👇 Share your thoughts below and join the discussion.</p>
 </div>
 
-<!-- 💬 Add First Comment CTA -->
-<div id="firstCommentCTA" style="margin-top:10px; font-size:14px; color:#666;">
+<!-- 💬 First Comment CTA -->
+<div id="firstCommentCTA">
   Be the first to comment and start the conversation 🚀
 </div>
 
 <style>
-#commentBtn {
-  background: #111;
-  color: #fff;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+/* CTA Styling */
+#engagementBox {
+  margin-top: 20px;
+  padding: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  color: var(--text);
+}
+
+#firstCommentCTA {
+  margin-top: 10px;
   font-size: 14px;
+  color: var(--muted);
+}
+
+/* Button */
+#commentBtn {
   margin-top: 15px;
+  background: var(--bg-card);
+  color: var(--text);
+  padding: 10px 18px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 #commentBtn:hover {
-  background: #333;
+  border-color: var(--neon);
+  box-shadow: var(--neon-glow);
 }
 
-/* Smooth animation */
+/* Wrapper FIXED (no inner scroll) */
 #commentWrapper {
-  max-height: 0;
+  height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all 0.5s ease;
+  transition: opacity 0.4s ease;
 }
 
 #commentWrapper.active {
-  max-height: 2000px;
+  height: auto;
   opacity: 1;
   margin-top: 20px;
+}
+
+/* Comment Box Styling (THEME MATCH 🔥) */
+#cusdis_thread {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px;
 }
 </style>
 
@@ -98,8 +123,7 @@ layout: default
     data-app-id="f919e8d2-dfdb-47b8-a2c8-dcef44c952cf"
     data-page-id="{{ page.url }}"
     data-page-url="{{ site.url }}{{ page.url }}"
-    data-page-title="{{ page.title }}"
-    data-theme="auto">
+    data-page-title="{{ page.title }}">
   </div>
 
 </div>
@@ -112,9 +136,10 @@ function loadComments() {
     const script = document.createElement("script");
     script.src = "https://cusdis.com/js/cusdis.es.js";
     script.async = true;
-    script.defer = true;
     document.body.appendChild(script);
     commentsLoaded = true;
+
+    setTimeout(setCusdisTheme, 500);
   }
 }
 
@@ -132,7 +157,7 @@ function toggleComments() {
   }
 }
 
-/* ⚡ Auto load on scroll */
+/* Auto load on scroll */
 window.addEventListener("scroll", function () {
   const wrapper = document.getElementById("commentWrapper");
   const rect = wrapper.getBoundingClientRect();
@@ -143,6 +168,15 @@ window.addEventListener("scroll", function () {
     loadComments();
   }
 });
+
+/* 🔥 Theme Sync (IMPORTANT) */
+function setCusdisTheme() {
+  const theme = document.documentElement.getAttribute("data-theme");
+  const el = document.getElementById("cusdis_thread");
+  if (el) {
+    el.setAttribute("data-theme", theme === "dark" ? "dark" : "light");
+  }
+}
 </script>
     </div>
 
