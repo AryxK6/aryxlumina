@@ -2,9 +2,50 @@ title: ARYX Lumina · Health & Beauty
 description: Aryx Lumina your trusted guide to skincare, hair care, beauty tips, and wellness. Expert advice, honest reviews & natural remedies for radiant health.
 url: "https://www.aryxlumina.xyz"
 baseurl: ""
-permalink: /:title
+permalink: /:title/
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+
 include:
   - _pages
+
+# ❌ Remove only problematic/system pages
+exclude:
+  - 404.html
+
+# 🔥 Control sitemap behavior
+defaults:
+  # ❌ Disable for category/tag/archive type pages
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      sitemap: true
+
+  - scope:
+      path: "category"
+    values:
+      sitemap: false
+
+  - scope:
+      path: "categories"
+    values:
+      sitemap: false
+
+  - scope:
+      path: "tag"
+    values:
+      sitemap: false
+
+  - scope:
+      path: "tags"
+    values:
+      sitemap: false
+
+  # ✅ Ensure posts are included
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      sitemap: true
