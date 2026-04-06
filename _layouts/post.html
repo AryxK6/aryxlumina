@@ -43,6 +43,107 @@ layout: default
         <ul class="toc-list" id="toc-ul"></ul>
       </div>
       {{ content }}
+      <hr>
+
+<!-- 🔥 Engagement CTA -->
+<div id="engagementBox" style="margin-top:20px; font-size:16px;">
+  <p><strong>What do you think?</strong> Have you tried this or have a better idea?</p>
+  <p>👇 Share your thoughts in the comments below and join the discussion.</p>
+</div>
+
+<!-- 💬 Add First Comment CTA -->
+<div id="firstCommentCTA" style="margin-top:10px; font-size:14px; color:#666;">
+  Be the first to comment and start the conversation 🚀
+</div>
+
+<style>
+#commentBtn {
+  background: #111;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+#commentBtn:hover {
+  background: #333;
+}
+
+/* Smooth animation */
+#commentWrapper {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+#commentWrapper.active {
+  max-height: 2000px;
+  opacity: 1;
+  margin-top: 20px;
+}
+</style>
+
+<button onclick="toggleComments()" id="commentBtn">
+  Show Comments
+</button>
+
+<div id="commentWrapper">
+
+  <div id="cusdis_thread"
+    data-host="https://cusdis.com"
+    data-app-id="f919e8d2-dfdb-47b8-a2c8-dcef44c952cf"
+    data-page-id="{{ page.url }}"
+    data-page-url="{{ site.url }}{{ page.url }}"
+    data-page-title="{{ page.title }}"
+    data-theme="auto">
+  </div>
+
+</div>
+
+<script>
+let commentsLoaded = false;
+
+function loadComments() {
+  if (!commentsLoaded) {
+    const script = document.createElement("script");
+    script.src = "https://cusdis.com/js/cusdis.es.js";
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    commentsLoaded = true;
+  }
+}
+
+function toggleComments() {
+  const wrapper = document.getElementById("commentWrapper");
+  const btn = document.getElementById("commentBtn");
+
+  if (!wrapper.classList.contains("active")) {
+    wrapper.classList.add("active");
+    btn.innerText = "Hide Comments";
+    loadComments();
+  } else {
+    wrapper.classList.remove("active");
+    btn.innerText = "Show Comments";
+  }
+}
+
+/* ⚡ Auto load on scroll */
+window.addEventListener("scroll", function () {
+  const wrapper = document.getElementById("commentWrapper");
+  const rect = wrapper.getBoundingClientRect();
+
+  if (rect.top < window.innerHeight - 100 && !commentsLoaded) {
+    wrapper.classList.add("active");
+    document.getElementById("commentBtn").innerText = "Hide Comments";
+    loadComments();
+  }
+});
+</script>
     </div>
 
     {% if page.tags.size > 0 %}
