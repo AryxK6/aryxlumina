@@ -44,150 +44,17 @@ layout: default
       </div>
       {{ content }}
       <hr>
+<h3>Comments</h3>
 
-<div id="engagementBox">
-  <p><strong>What do you think?</strong> Have you tried this or have a better idea?</p>
-  <p>👇 Share your thoughts below and join the discussion.</p>
+<div id="cusdis_thread"
+  data-host="https://cusdis.com"
+  data-app-id="f919e8d2-dfdb-47b8-a2c8-dcef44c952cf"
+  data-page-id="{{ page.url }}"
+  data-page-url="{{ site.url }}{{ page.url }}"
+  data-page-title="{{ page.title }}">
 </div>
 
-<div id="firstCommentCTA">
-  Be the first to comment and start the conversation 🚀
-</div>
-
-<style>
-#engagementBox {
-  margin-top: 20px;
-  padding: 16px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  color: var(--text);
-}
-
-#firstCommentCTA {
-  margin-top: 10px;
-  font-size: 14px;
-  color: var(--muted);
-}
-
-#commentBtn {
-  margin-top: 15px;
-  background: var(--bg-card);
-  color: var(--text);
-  padding: 10px 18px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-#commentBtn:hover {
-  border-color: var(--neon);
-  box-shadow: var(--neon-glow);
-}
-
-#commentWrapper {
-  display: none;
-  width: 100%;
-}
-
-#commentWrapper.active {
-  display: block;
-  margin-top: 20px;
-}
-
-#cusdis_thread {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 10px;
-}
-</style>
-
-<button onclick="toggleComments()" id="commentBtn">
-  Show Comments
-</button>
-
-<div id="commentWrapper">
-  <div id="cusdis_thread"
-    data-host="https://cusdis.com"
-    data-app-id="f919e8d2-dfdb-47b8-a2c8-dcef44c952cf"
-    data-page-id="{{ page.url }}"
-    data-page-url="{{ site.url }}{{ page.url }}"
-    data-page-title="{{ page.title }}"
-    data-theme="dark">
-  </div>
-</div>
-
-<script>
-let commentsLoaded = false;
-
-function loadComments() {
-  if (!commentsLoaded) {
-    const script = document.createElement("script");
-    script.src = "https://cusdis.com/js/cusdis.es.js";
-    script.async = true;
-    document.body.appendChild(script);
-    commentsLoaded = true;
-
-    // Force resize fix
-    setTimeout(() => {
-      window.dispatchEvent(new Event('resize'));
-    }, 1500);
-
-    // Force theme sync
-    setTimeout(setCusdisTheme, 1500);
-  }
-}
-
-function toggleComments() {
-  const wrapper = document.getElementById("commentWrapper");
-  const btn = document.getElementById("commentBtn");
-
-  if (!wrapper.classList.contains("active")) {
-    wrapper.classList.add("active");
-    btn.innerText = "Hide Comments";
-    loadComments();
-  } else {
-    wrapper.classList.remove("active");
-    btn.innerText = "Show Comments";
-  }
-}
-
-/* Auto load on scroll */
-window.addEventListener("scroll", function () {
-  const wrapper = document.getElementById("commentWrapper");
-  const rect = wrapper.getBoundingClientRect();
-
-  if (rect.top < window.innerHeight - 100 && !commentsLoaded) {
-    wrapper.classList.add("active");
-    document.getElementById("commentBtn").innerText = "Hide Comments";
-    loadComments();
-  }
-});
-
-/* 🔥 STRONG THEME SYNC */
-function setCusdisTheme() {
-  const theme = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
-
-  const iframe = document.querySelector("#cusdis_thread iframe");
-  if (iframe) {
-    iframe.contentWindow.postMessage({
-      type: "set-theme",
-      data: theme
-    }, "*");
-  }
-}
-
-/* Detect theme change */
-const observer = new MutationObserver(() => {
-  setTimeout(setCusdisTheme, 500);
-});
-
-observer.observe(document.documentElement, {
-  attributes: true,
-  attributeFilter: ['data-theme']
-});
-</script>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
     </div>
 
     {% if page.tags.size > 0 %}
